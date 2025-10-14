@@ -4,7 +4,7 @@ def find_minimum_path_sum(triangle):
         return 0
     
     triangle_height = len(triangle)
-    # Используем только один массив длиной n+1
+    # Используем только один массив длиной triangle_height+1
     dp = [0] * (triangle_height + 1)
     
     # Проходим снизу вверх
@@ -25,7 +25,8 @@ triangle1 = [
     [4, 1, 8, 3],
     [6, 4, 9, 1, 7]
 ]
-# Ожидаемый результат: 2 + 3 + 5 + 1 + 4 = 15
+
+# Ожидаемый результат: 15
 min_sum1 = find_minimum_path_sum(triangle1)
 print(f"Треугольник1: Минимальная сумма пути = {min_sum1}") 
 # Вывод: 15
@@ -33,6 +34,7 @@ print(f"Треугольник1: Минимальная сумма пути = {m
 triangle2 = [
     [-10]
 ]
+
 # Ожидаемый результат: -10
 min_sum2 = find_minimum_path_sum(triangle2)
 print(f"Треугольник2: Минимальная сумма пути = {min_sum2}")
@@ -42,6 +44,7 @@ triangle3 = [
     [1],
     [2, 3]
 ]
+
 # Ожидаемый результат: 3
 min_sum3 = find_minimum_path_sum(triangle3)
 print(f"Треугольник3: Минимальная сумма пути = {min_sum3}")
